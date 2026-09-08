@@ -4,7 +4,7 @@
    colour 62), real-vs-int-vs-string value formatting by code range, an LWPOLYLINE vertex list, and a
    whole minimal ENTITIES section / EOF document."
   (:require [clojure.test :refer [deftest is]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [dxf.core :as d]))
 
 (deftest line-entity
