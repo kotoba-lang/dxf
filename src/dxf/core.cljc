@@ -13,7 +13,7 @@
 
      [:line {:layer \"0\" :from [0 0] :to [100 50]}]   → 0/LINE  8/0  10/0.0 20/0.0  11/100.0 21/50.0
      (drawing [:circle {:at [50 50] :radius 25}])     → wraps entities in a SECTION … ENDSEC / EOF"
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def ^:private point-codes {:at [10 20 30] :from [10 20 30] :center [10 20 30] :to [11 21 31]})
 (def ^:private scalar-codes
@@ -56,7 +56,7 @@
 (defn entity-lines
   "The group-code/value lines (a flat seq of strings) for one [:kind {attrs}] entity."
   [[kind attrs]]
-  (concat ["0" (str/upper-case (name kind))]
+  (concat ["0" (str/upper (name kind))]
           (mapcat (fn [[k v]] (attr-lines k v)) attrs)))
 
 (defn entity
