@@ -7,5 +7,5 @@ The implementation lives in `dxf.core`; `kotoba.dxf` is provided as a compatibil
 ## Test
 
 ```sh
-clojure -M:test
+kbb -M:test
 ```
