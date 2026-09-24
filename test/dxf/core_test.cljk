@@ -3,7 +3,7 @@
    correct group-code/value pairs: point codes (10/20/30, 11/21/31), scalar codes (layer 8, radius 40,
    colour 62), real-vs-int-vs-string value formatting by code range, an LWPOLYLINE vertex list, and a
    whole minimal ENTITIES section / EOF document."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [kotoba.lang.text :as str]
             [dxf.core :as d]))
 
